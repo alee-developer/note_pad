@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           data[index], view.getRandomColor(), index,onDismissed: (d) {
                         setState(() {
                           NotesController().deleteNote(data[index].id ?? 0);
-                          data.removeAt(index);
+                          snap.deleteLocalNotes(data[index]);
                         });
                       });
                     },
